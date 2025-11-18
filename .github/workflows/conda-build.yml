@@ -51,22 +51,22 @@ jobs:
             SHORT_CONFIG: osx_64_compatno
             UPLOAD_PACKAGES: True
             os: macos
-            runs_on: ['macos-13']
+            runs_on: ['macos-15-intel']
           - CONFIG: osx_64_compatyes
             SHORT_CONFIG: osx_64_compatyes
             UPLOAD_PACKAGES: True
             os: macos
-            runs_on: ['macos-13']
+            runs_on: ['macos-15-intel']
           - CONFIG: osx_arm64_compatno
             SHORT_CONFIG: osx_arm64_compatno
             UPLOAD_PACKAGES: True
             os: macos
-            runs_on: ['macos-15']
+            runs_on: ['macos-latest']
           - CONFIG: osx_arm64_compatyes
             SHORT_CONFIG: osx_arm64_compatyes
             UPLOAD_PACKAGES: True
             os: macos
-            runs_on: ['macos-15']
+            runs_on: ['macos-latest']
           - CONFIG: win_64_compatno
             SHORT_CONFIG: win_64_compatno
             UPLOAD_PACKAGES: True
@@ -80,7 +80,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
 
     - name: Build on Linux
       id: build-linux
